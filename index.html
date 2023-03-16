@@ -1,0 +1,88 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="css/common.css?v1.1">
+    <link rel="stylesheet" href="css/wenda.css?v1.1">
+    <link rel="stylesheet" href="css/hightlight.css">
+    <style>
+        input {
+          font-family: "SimHei", sans-serif;
+          color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout-wrap">
+<header class="layout-header">
+		<div class="container" data-flex="main:justify cross:start">
+				<div class="header-logo">
+					<h2 class="logo"><a class="links" href="https://freechatgpt.chat/" title="AiChatGPT" style="text-decoration:underline double,color:blue"><span class="logo-title">FreeChatGPT</span></a></h2>
+				</div>
+				<div class="header-logo">
+					<h2 class="logo"><a class="links" id="clean" title="Clear Message"><span class="logo-title">Clear Message</span></a></h2>
+				</div>
+			</div>
+		</header>
+        <div class="layout-content">
+            <div class="container">
+                <article class="article" id="article">
+                    <div class="article-box">
+                        <div class="precast-block" data-flex="main:left">
+							<div class="input-group">
+								<span style="text-align: center;color:#9ca2a8">&nbsp;&nbsp;Functions：</span>
+								<select id="id" class="btn-default form-control" style="background-color: rgb(164,165,179);min-width:100px;max-width:120px">
+									<option value="1">Default</option>
+									<!--<option value="2">Check balance</option>-->
+								</select>
+								<!--<span style="text-align: center;color:#9ca2a8">&nbsp;&nbsp;角色选择：</span>-->
+								<!--<select id="role" class="btn-default form-control" style="background-color: rgb(164,165,179);min-width:100px;max-width:120px">-->
+								<!--	<option value="system">System</option>-->
+								<!--	<option value="user">User</option>-->
+								<!--	<option value="assistant" selected>Assistant</option>-->
+								<!--</select>-->
+								<span style="text-align: center;color:#9ca2a8">&nbsp;&nbsp;Dialogue：</span>
+								<input type="checkbox" id="keep"  checked style="min-width:220px;">
+								<label for="keep"></label>
+								<span style="text-align: center;color:#9ca2a8">&nbsp;&nbsp;APIKEY：</span>
+								<input type="text" class="form-control" placeholder="sk-xxxxxxxxxx" maxlength="100" id="key" value="" style="background-color: rgb(164,165,179);min-width:200px;max-width:280px">
+
+								<!--<div class="right-btn layout-bar">-->
+								<!--	<p class="balance  bright-btn" id="balance"  data-flex="main:center cross:center"><i class="iconfont icon-duihao"></i>Balance</p>-->
+								<!--</div>-->
+
+							</div>
+						</div>
+                        <ul id="article-wrapper">
+                        </ul>
+                        <div class="creating-loading" data-flex="main:center dir:top cross:center">
+                            <div class="semi-circle-spin"></div>
+                        </div>
+                        <div id="fixed-block">
+                            <div class="precast-block" id="kw-target-box" data-flex="main:left cross:center">
+                                <div id="target-box" class="box">
+                                    <textarea name="kw-target" placeholder="" id="kw-target" autofocus rows=1></textarea>
+                                </div>
+                                <div class="right-btn layout-bar">
+                                    <p class="btn ai-btn bright-btn" id="ai-btn" data-flex="main:center cross:center"><i class="iconfont icon-wuguan"></i>Enter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <script src="https://s3.pstatp.com/cdn/expire-1-w/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/layer/3.5.1/layer.min.js" type="application/javascript"></script>
+	<script src="/js/chat.js?v2.8"></script>
+	<script src="/js/highlight.min.js"></script>
+    <script src="/js/showdown.min.js"></script>
+</body>
+
+</html>
